@@ -14,7 +14,7 @@
         <module>mall-common</module>
     </modules>
 
-    <groupId>com.miw</groupId>
+
     <artifactId>mall-framework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
