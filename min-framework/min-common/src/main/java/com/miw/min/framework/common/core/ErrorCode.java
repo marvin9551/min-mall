@@ -1,4 +1,4 @@
-package com.miw.mall.framework.common.core;
+package com.miw.min.framework.common.core;
 
 /**
  * @ClassName ErrorCode
