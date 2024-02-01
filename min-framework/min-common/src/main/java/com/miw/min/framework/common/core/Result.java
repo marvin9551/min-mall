@@ -1,6 +1,6 @@
-package com.miw.mall.framework.common.core;
+package com.miw.min.framework.common.core;
 
-import com.miw.mall.framework.common.enums.ErrorCodeConstants;
+import com.miw.min.framework.common.enums.ErrorCodeConstants;
 
 import java.io.Serializable;
 

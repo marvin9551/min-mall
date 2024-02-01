@@ -1,6 +1,6 @@
-package com.miw.mall.framework.common.enums;
+package com.miw.min.framework.common.enums;
 
-import com.miw.mall.framework.common.core.ErrorCode;
+import com.miw.min.framework.common.core.ErrorCode;
 
 /**
  * @ClassName ErrorCodeConstants
