@@ -16,6 +16,8 @@
         <!-- 统一依赖管理 -->
         <spring.boot.version>3.1.5</spring.boot.version>
         <jakarta.version>2.0.2</jakarta.version>
+        <knife4j.version>4.3.0</knife4j.version>
+        <springdoc.version>1.6.15</springdoc.version>
     </properties>
 
     <dependencyManagement>
@@ -42,6 +44,18 @@
                 <groupId>jakarta.validation</groupId>
                 <artifactId>jakarta.validation-api</artifactId>
                 <version>${jakarta.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
             </dependency>
 
 
