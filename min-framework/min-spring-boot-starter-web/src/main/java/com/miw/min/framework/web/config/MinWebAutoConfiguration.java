@@ -1,4 +1,4 @@
-package com.miw.min.framework.web;
+package com.miw.min.framework.web.config;
 
 import jakarta.annotation.Resource;
 import org.springframework.boot.autoconfigure.AutoConfiguration;

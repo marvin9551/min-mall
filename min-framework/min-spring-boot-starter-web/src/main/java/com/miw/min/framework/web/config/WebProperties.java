@@ -1,4 +1,4 @@
-package com.miw.min.framework.web;
+package com.miw.min.framework.web.config;
 
 import org.springframework.validation.annotation.Validated;
 

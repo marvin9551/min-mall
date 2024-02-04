@@ -1,0 +1,1 @@
+package com.miw.min.framework.mybatis;
