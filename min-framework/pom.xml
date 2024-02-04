@@ -13,6 +13,7 @@
     <modules>
         <module>min-common</module>
         <module>min-spring-boot-starter-web</module>
+        <module>min-spring-boot-starter-mybatis</module>
     </modules>
 
 
