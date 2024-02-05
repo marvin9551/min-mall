@@ -1,8 +1,8 @@
 package com.miw.min.framework.swagger.config;
 
+import jakarta.validation.constraints.NotEmpty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import javax.validation.constraints.NotEmpty;
 
 /**
  * @ClassName SwaggerProperties

@@ -1,7 +1,7 @@
 package com.miw.min.mall.goods.controller.app;
 
 import com.miw.min.framework.common.core.Result;
-import com.miw.min.mall.goods.entity.DO.GoodsSpu;
+import com.miw.min.mall.goods.entity.bo.GoodsSpu;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
