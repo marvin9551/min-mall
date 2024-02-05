@@ -49,42 +49,4 @@ public class MinSwaggerAutoConfiguration {
     }
 
 
-    /**
-     * 自定义 OpenAPI 处理器
-     */
-    @Bean
-    public OpenAPIService openApiBuilder(Optional<OpenAPI> openAPI,
-                                         SecurityService securityParser,
-                                         SpringDocConfigProperties springDocConfigProperties,
-                                         PropertyResolverUtils propertyResolverUtils,
-                                         Optional<List<OpenApiBuilderCustomizer>> openApiBuilderCustomizers,
-                                         Optional<List<ServerBaseUrlCustomizer>> serverBaseUrlCustomizers,
-                                         Optional<JavadocProvider> javadocProvider) {
-
-        return new OpenAPIService(openAPI, securityParser, springDocConfigProperties,
-                propertyResolverUtils, openApiBuilderCustomizers, serverBaseUrlCustomizers, javadocProvider);
-    }
-
-
-    // ========== 分组 OpenAPI 配置 ==========
-
-    /**
-     * 所有模块的 API 分组
-     */
-    @Bean
-    public GroupedOpenApi allGroupedOpenApi() {
-        return buildGroupedOpenApi("all", "");
-    }
-
-    public static GroupedOpenApi buildGroupedOpenApi(String group) {
-        return buildGroupedOpenApi(group, group);
-    }
-
-    public static GroupedOpenApi buildGroupedOpenApi(String group, String path) {
-        return GroupedOpenApi.builder()
-                .group(group)
-                .pathsToMatch("/admin-api/" + path + "/**", "/app-api/" + path + "/**")
-                .build();
-    }
-
 }
