@@ -11,6 +11,7 @@
     <modules>
         <module>min-dependencies</module>
         <module>min-framework</module>
+        <module>mall-goods</module>
     </modules>
 
     <properties>

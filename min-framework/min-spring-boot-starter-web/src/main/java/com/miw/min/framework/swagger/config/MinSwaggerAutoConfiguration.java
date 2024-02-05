@@ -36,21 +36,6 @@ import java.util.Optional;
 @ConditionalOnProperty(prefix = "springdoc.api-docs", name = "enabled", havingValue = "true", matchIfMissing = true) // 设置为 false 时，禁用
 public class MinSwaggerAutoConfiguration {
 
-    // ========== 全局 OpenAPI 配置 ==========
-
-    @Bean
-    public OpenAPI createApi(SwaggerProperties properties) {
-        Map<String, SecurityScheme> securitySchemas = buildSecuritySchemes();
-        OpenAPI openAPI = new OpenAPI()
-                // 接口信息
-                .info(buildInfo(properties))
-                // 接口安全配置
-                .components(new Components().securitySchemes(securitySchemas))
-                .addSecurityItem(new SecurityRequirement().addList(HttpHeaders.AUTHORIZATION));
-        securitySchemas.keySet().forEach(key -> openAPI.addSecurityItem(new SecurityRequirement().addList(key)));
-        return openAPI;
-    }
-
     /**
      * API 摘要信息
      */
@@ -63,18 +48,6 @@ public class MinSwaggerAutoConfiguration {
                 .license(new License().name(properties.getLicense()).url(properties.getLicenseUrl()));
     }
 
-    /**
-     * 安全模式，这里配置通过请求头 Authorization 传递 token 参数
-     */
-    private Map<String, SecurityScheme> buildSecuritySchemes() {
-        Map<String, SecurityScheme> securitySchemes = new HashMap<>();
-        SecurityScheme securityScheme = new SecurityScheme()
-                .type(SecurityScheme.Type.APIKEY) // 类型
-                .name(HttpHeaders.AUTHORIZATION) // 请求头的 name
-                .in(SecurityScheme.In.HEADER); // token 所在位置
-        securitySchemes.put(HttpHeaders.AUTHORIZATION, securityScheme);
-        return securitySchemes;
-    }
 
     /**
      * 自定义 OpenAPI 处理器
