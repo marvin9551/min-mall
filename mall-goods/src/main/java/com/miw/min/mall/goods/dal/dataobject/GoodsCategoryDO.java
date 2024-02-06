@@ -1,14 +1,19 @@
-package com.miw.min.mall.goods.controller.admin.vo;
+package com.miw.min.mall.goods.dal.dataobject;
 
-import org.springframework.web.bind.annotation.RequestBody;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.miw.min.framework.mybatis.core.dataobject.BaseDO;
+
+import java.io.Serializable;
 
 /**
- * @ClassName GoodsCategoryCreateReqVO
- * @Description 商品分类创建
+ * @ClassName GoodsCategoryDO
+ * @Description 商品分类DO
  * @Author marvin
- * @DATE 2024/2/5 16:31
+ * @DATE 2024/2/6 10:08
  **/
-public class GoodsCategoryCreateReqVO {
+@TableName("goods_category")
+public class GoodsCategoryDO extends BaseDO  {
+
 
 
     private String name;
@@ -23,18 +28,22 @@ public class GoodsCategoryCreateReqVO {
 
     private String url;
 
+    private Integer status;
 
-    public GoodsCategoryCreateReqVO(String name, Long parentId, Integer level, String icon_url, Integer sort, String url) {
+    public GoodsCategoryDO(String name, Long parentId, Integer level, String icon_url, Integer sort,
+                           String url, Integer status) {
         this.name = name;
         this.parentId = parentId;
         this.level = level;
         this.icon_url = icon_url;
         this.sort = sort;
         this.url = url;
+        this.status = status;
     }
 
-    public GoodsCategoryCreateReqVO() {
+    public GoodsCategoryDO() {
     }
+
 
     public String getName() {
         return name;
@@ -82,5 +91,13 @@ public class GoodsCategoryCreateReqVO {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

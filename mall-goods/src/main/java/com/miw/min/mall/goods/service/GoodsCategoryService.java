@@ -14,5 +14,5 @@ public interface GoodsCategoryService {
      * @param createReqVO
      * @return
      */
-    Long createCategory(GoodsCategoryCreateReqVO createReqVO);
+    Integer createCategory(GoodsCategoryCreateReqVO createReqVO);
 }

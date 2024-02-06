@@ -28,7 +28,7 @@ public class GoodsCategoryController {
 
     @PostMapping("/create")
     @Operation(summary = "创建商品分类")
-    public Result<Long> createCategory(@RequestBody GoodsCategoryCreateReqVO createReqVO) {
+    public Result<Integer> createCategory(@RequestBody GoodsCategoryCreateReqVO createReqVO) {
         return Result.success(goodsCategoryService.createCategory(createReqVO));
     }
 

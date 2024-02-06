@@ -1,7 +1,11 @@
 package com.miw.min.mall.goods.service.impl;
+import java.time.LocalDateTime;
 
 import com.miw.min.mall.goods.controller.admin.vo.GoodsCategoryCreateReqVO;
+import com.miw.min.mall.goods.dal.dataobject.GoodsCategoryDO;
+import com.miw.min.mall.goods.dal.mysql.GoodsCategoryMapper;
 import com.miw.min.mall.goods.service.GoodsCategoryService;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,10 +16,26 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 public class GoodsCategoryServiceImpl implements GoodsCategoryService {
+    @Resource
+    private GoodsCategoryMapper goodsCategoryMapper;
 
     @Override
-    public Long createCategory(GoodsCategoryCreateReqVO createReqVO) {
-        return null;
+    public Integer createCategory(GoodsCategoryCreateReqVO createReqVO) {
+
+
+        GoodsCategoryDO category = new GoodsCategoryDO();
+
+        category.setName(createReqVO.getName());
+        category.setParentId(createReqVO.getParentId());
+        category.setLevel(category.getLevel());
+        category.setIcon_url(category.getIcon_url());
+        category.setSort(category.getSort());
+        category.setUrl(category.getUrl());
+        category.setStatus(category.getStatus());
+        category.setCreateTime(LocalDateTime.now());
+        category.setUpdateTime(LocalDateTime.now());
+        category.setDeleted(false);
+        return goodsCategoryMapper.insert(category);
     }
 
 }
