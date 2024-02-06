@@ -1,0 +1,2 @@
+com.miw.min.framework.swagger.config.MinSwaggerAutoConfiguration
+com.miw.min.framework.web.config.MinWebAutoConfiguration

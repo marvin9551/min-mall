@@ -3,6 +3,20 @@ server:
   servlet:
     context-path: /mall-goods
 
-springdoc:
-  api-docs:
-    enabled: true
+min:
+  info:
+    base-package: com.miw.min.mall.goods.dal.mysql
+  swagger:
+    title:  商品服务接口文档
+    description: 商品服务接口文档
+    author: marvin
+
+
+--- #################### 数据库相关配置 ####################
+spring:
+  # 数据源配置项
+  datasource:
+    url: jdbc:mysql://localhost:3306/min-mall-goods?useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456

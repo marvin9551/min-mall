@@ -1,4 +1,4 @@
-package com.miw.min.mall.goods.entity.DO;
+package com.miw.min.mall.goods.entity.bo;
 
 import java.math.BigDecimal;
 import java.util.Date;

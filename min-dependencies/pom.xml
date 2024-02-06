@@ -15,9 +15,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 统一依赖管理 -->
         <spring.boot.version>3.1.5</spring.boot.version>
-        <jakarta.version>2.0.2</jakarta.version>
-        <knife4j.version>4.3.0</knife4j.version>
-        <springdoc.version>1.6.15</springdoc.version>
+        <jakarta.version>3.0.2</jakarta.version>
+        <knife4j.version>4.4.0</knife4j.version>
 
         <!-- DB 相关 -->
         <druid.version>1.2.20</druid.version>
@@ -25,6 +24,8 @@
         <mybatis-plus-generator.version>3.5.3</mybatis-plus-generator.version>
         <dynamic-datasource.version>3.6.1</dynamic-datasource.version>
         <mybatis-plus-join.version>1.4.7</mybatis-plus-join.version>
+
+        <hutool.version>5.8.22</hutool.version>
     </properties>
 
     <dependencyManagement>
@@ -56,14 +57,18 @@
 
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
             </dependency>
+
+
             <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-ui</artifactId>
-                <version>${springdoc.version}</version>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
+
+
 
 
             <!-- 工具类相关 -->
@@ -79,21 +84,10 @@
                 <version>${revision}</version>
             </dependency>
 
-
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>dynamic-datasource-spring-boot-starter</artifactId> <!-- 多数据源 -->
-                <version>${dynamic-datasource.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.yulichang</groupId>
