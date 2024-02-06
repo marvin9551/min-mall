@@ -1,5 +1,6 @@
 package com.miw.min.framework.web.config;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 
 
@@ -10,7 +11,8 @@ import org.springframework.validation.annotation.Validated;
  * @Author marvin
  * @DATE 2024/2/1 10:11
  **/
-@Validated
+
+@ConfigurationProperties
 public class WebProperties {
 
     private Api appApi = new Api("/app-api","**.controller.app.**");
