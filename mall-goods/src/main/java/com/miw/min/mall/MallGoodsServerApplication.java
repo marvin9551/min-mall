@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @DATE 2024/2/4 15:22
  **/
 @SpringBootApplication()
-public class MallServerApplication {
+public class MallGoodsServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MallServerApplication.class, args);
+        SpringApplication.run(MallGoodsServerApplication.class, args);
     }
 }
