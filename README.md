@@ -66,4 +66,4 @@ min-mall 商城核心有两块，分别是商城业务和基础架构，通过�
 
 ### 📚 学习文档
 
-[springboot3封装自定义starter.md](./doc/springboot3封装自定义starter.md)
+[1.springboot3封装自定义starter](./doc/springboot3封装自定义starter.md)

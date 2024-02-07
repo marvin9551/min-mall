@@ -48,6 +48,4 @@ public class MinSwaggerAutoConfiguration {
                 .contact(new Contact().name(properties.getAuthor()).url(properties.getUrl()).email(properties.getEmail()))
                 .license(new License().name(properties.getLicense()).url(properties.getLicenseUrl()));
     }
-
-
 }
