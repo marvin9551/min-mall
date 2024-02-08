@@ -57,7 +57,7 @@ min-mall 商城核心有两块，分别是商城业务和基础架构，通过�
 | 18 | XXL-Job             | 分布式定时任务框架          | [http://www.xuxueli.com/xxl-job](http://www.xuxueli.com/xxl-job)                                   |
 | 19 | SkyWalking          | 分布式链路追踪框架          | [https://skywalking.apache.org](https://skywalking.apache.org/)                                    |
 | 20 | JetCache            | Java 缓存框架          | [https://github.com/alibaba/jetcache](https://github.com/alibaba/jetcache)                                    |
-
+| 21 | Nacos               | 注册中心，配置中心          | [https://github.com/alibaba/nacos](https://github.com/alibaba/nacos)               |
 ### 📚 能学到什么
 
 - 掌握SpringBoot框架
@@ -68,4 +68,8 @@ min-mall 商城核心有两块，分别是商城业务和基础架构，通过�
 
 ### 📚 学习文档
 
+[Docker启动Mysql容器](doc/md/Docker启动Mysql容器.md)
+
 [springboot 3封装自定义starter](doc/md/springboot3封装自定义starter.md)
+
+[Docker启动Mysql容器](doc/md/Docker%20启动Nacos容器.md)
